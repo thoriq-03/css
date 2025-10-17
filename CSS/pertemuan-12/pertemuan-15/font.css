@@ -1,0 +1,23 @@
+h1{
+    font-size: 24px;
+    color:aqua;
+}
+
+.normal {
+    font-style: normal;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+
+.oblique {
+    font-style: oblique;
+    font-size: 20px;
+    font-weight: 500;
+}

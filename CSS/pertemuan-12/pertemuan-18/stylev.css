@@ -1,0 +1,36 @@
+header{
+    width: 90vw;
+    height: 90vh;
+    color: white;
+    background-color: darkcyan;
+    border-radius: 1em;
+    margin: 0.5em;
+    padding: 1em;
+}
+
+
+footer {
+    text-align: center;
+}
+
+
+#box2 {
+    width: 300px;
+    height: 150px;
+    background-color: orange;
+    box-sizing: border-box;
+}
+#box3 {
+    width: 300px;
+    height: 150px;
+    background-color: orange;
+    box-sizing: border-box;
+}
+#box1 {
+    width: 300px;
+    height: 150px;
+    background-color: orange;
+    box-sizing: border-box;
+}
+
+

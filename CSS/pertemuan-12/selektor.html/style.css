@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+p{
+    color: blue;
+}
+.pink {
+    color: wheat;
+    background: palevioletred;
+    padding: 5px;
+}
+.paragraf { 
+    padding: 5px;
+    font-weight: bolder;}
+
+.text-white{
+    color: white;
+}
+
+.bg-teal{
+    background: teal;
+}
+#header {
+    background: teal;
+    color: white;
+    height: 100px;
+    padding: 50px;
+}
+.link {
+    background: blueviolet;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+#menu {
+    background: lightcoral;
+    color: white;
+    height: 600px;
+    padding: 100px;
+    margin-top: 700px;
+}
+.backtotop {
+    background: red;
+    color: white;
+    padding: 5px;
+    margin-top: none;
+}
+
+input[type="text"]{
+    color: black;
+    background: none;
+    padding: 10px;
+    border: 1px solid black;
+    width: 300px;
+}
+a:hover {
+    color: green;
+    background: black;
+}

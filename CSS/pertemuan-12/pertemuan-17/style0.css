@@ -1,0 +1,48 @@
+/* body{
+    font-size: 10px;
+}
+
+header {
+    width: 500px;
+    padding: 8px;
+    background-color:aqua ;
+    color: black; 
+    font-size: 1.4em;  
+}
+
+
+
+h1{
+    font-size: 1.2em;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2{
+    font-size: 200%;
+}
+
+.text-big {
+    font-size: 120%;
+}
+
+article{
+    width: 600px;
+    background-color: aqua;
+    padding: 16px;
+} */
+
+
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 2em;
+    }
+
+    footer {
+      border-top: 1px solid silver;
+      padding: 1em 0;
+    }

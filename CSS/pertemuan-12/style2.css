@@ -1,0 +1,15 @@
+h1 {
+    color: black;
+    text-transform: uppercase;
+}
+.paragraf-1 {
+    color: black;
+    font-size: 18px;
+    font-family: Arial;
+}
+#header-1{
+    background-color: lightgray;
+    text-align: center;
+}
+input[type="text"]{
+    border: 1px solid black}

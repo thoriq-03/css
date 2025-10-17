@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoriq Ibd | Front End Developer</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            100: '#FFF9E6',
+                            200: '#FFEEB8',
+                            300: '#FFE38A',
+                            400: '#FFD85C',
+                            500: '#FFD700',
+                            600: '#CCAC00',
+                            700: '#998100',
+                            800: '#665600',
+                            900: '#332B00',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(255,215,0,0.3) 100%);
+        }
+        
+        .gold-border {
+            position: relative;
+        }
+        
+        .gold-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #FFD700, #FFF9E6);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .gold-border:hover::after {
+            transform: scaleX(1);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Vanta.js Background -->
+    <div id="vanta-bg" class="fixed top-0 left-0 w-full h-full z-0"></div>
+    
+    <!-- Main Content -->
+    <div class="relative z-10 min-h-screen">
+        <!-- Navigation -->
+        <nav class="px-6 py-4 flex justify-between items-center bg-white bg-opacity-90 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+            <div class="text-2xl font-bold playfair text-gold-600">Thoriq Ibd</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="gold-border font-medium hover:text-gold-600">Home</a>
+                <a href="#about" class="gold-border font-medium hover:text-gold-600">About</a>
+                <a href="#projects" class="gold-border font-medium hover:text-gold-600">Projects</a>
+                <a href="#contact" class="gold-border font-medium hover:text-gold-600">Contact</a>
+            </div>
+            <button class="md:hidden" id="menu-btn">
+                <i data-feather="menu"></i>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-white bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-8">
+            <button id="close-menu" class="absolute top-6 right-6">
+                <i data-feather="x"></i>
+            </button>
+            <a href="#home" class="text-2xl gold-border">Home</a>
+            <a href="#about" class="text-2xl gold-border">About</a>
+            <a href="#projects" class="text-2xl gold-border">Projects</a>
+            <a href="#contact" class="text-2xl gold-border">Contact</a>
+        </div>
+        
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-24">
+            <div class="text-center max-w-4xl">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold playfair mb-6 text-gold-600">
+                    Thoriq Ibd
+                </h1>
+                <h2 class="text-xl md:text-2xl font-medium mb-8 text-gold-800">
+                    Front End Developer & UI/UX Enthusiast
+                </h2>
+                <p class="text-gray-600 mb-10 text-lg leading-relaxed">
+                    I craft elegant digital experiences with clean code and thoughtful design. 
+                    Specializing in responsive interfaces that blend aesthetics with functionality.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#projects" class="px-8 py-3 bg-gold-500 text-white rounded-full font-medium hover:bg-gold-600 transition-all shadow-lg hover:shadow-xl">
+                        View Work
+                    </a>
+                    <a href="#contact" class="px-8 py-3 border-2 border-gold-500 text-gold-600 rounded-full font-medium hover:bg-gold-50 transition-all">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="py-20 px-6 md:px-12 lg:px-24 gold-gradient">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold playfair text-center mb-16 text-gold-700">
+                    About <span class="text-gold-500">Me</span>
+                </h2>
+                
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3 flex justify-center">
+                        <div class="relative">
+                            <img src="http://static.photos/workspace/640x360/42" alt="Thoriq Ibd" class="rounded-lg w-full max-w-md shadow-xl">
+                            <div class="absolute -inset-4 border-2 border-gold-300 rounded-lg -z-10"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold playfair mb-4 text-gold-600">Coding with Passion</h3>
+                        <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                            With over 5 years of experience in front-end development, I specialize in creating responsive, 
+                            user-friendly interfaces that deliver exceptional user experiences. My approach combines technical 
+                            expertise with an eye for design.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-6 mb-10">
+                            <div class="flex items-start">
+                                <div class="bg-gold-100 p-3 rounded-full mr-4">
+                                    <i data-feather="code" class="text-gold-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gold-700">Clean Code</h4>
+                                    <p class="text-gray-600 text-sm">Modular, scalable, and maintainable</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-gold-100 p-3 rounded-full mr-4">
+                                    <i data-feather="smartphone" class="text-gold-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gold-700">Responsive Design</h4>
+                                    <p class="text-gray-600 text-sm">Perfect on all devices</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-gold-100 p-3 rounded-full mr-4">
+                                    <i data-feather="zap" class="text-gold-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gold-700">Performance</h4>
+                                    <p class="text-gray-600 text-sm">Fast and efficient</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-gold-100 p-3 rounded-full mr-4">
+                                    <i data-feather="eye" class="text-gold-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gold-700">UI/UX Focus</h4>
+                                    <p class="text-gray-600 text-sm">Beautiful and intuitive</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h4 class="font-bold playfair mb-4 text-gold-600">Tech Stack</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-2 bg-gold-100 text-gold-700 rounded-full">HTML5</span>
+                                <span class="px-4 py-2 bg-gold-100 text-gold-700 rounded-full">CSS3</span>
+                                <span class="px-4 py-2 bg-gold-100 text-gold-700 rounded-full">JavaScript</span>
+                                <span class="px-4 py-2 bg-gold-100 text-gold-700 rounded-full">React</span>
+                                <span class="px-4 py-2 bg-gold-100 text-gold-700 rounded-full">TailwindCSS</span>
+                                <span class="px-4 py-2 bg-gold-100 text-gold-700 rounded-full">Figma</span>
+                                <span class="px-4 py-2 bg-gold-100 text-gold-700 rounded-full">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-6 md:px-12 lg:px-24 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold playfair text-center mb-16 text-gold-700">
+                    Featured <span class="text-gold-500">Projects</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                        <div class="h-48 overflow-hidden">
+                            <img src="http://static.photos/technology/640x360/1" alt="Project 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold playfair mb-2 text-gold-600">E-Commerce Platform</h3>
+                            <p class="text-gray-600 mb-4">A modern e-commerce solution with seamless checkout and product management.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gold-100 text-gold-700 text-xs rounded">React</span>
+                                <span class="px-2 py-1 bg-gold-100 text-gold-700 text-xs rounded">Node.js</span>
+                                <span class="px-2 py-1 bg-gold-100 text-gold-700 text-xs rounded">MongoDB</span>
+                            </div>
+                            <a href="#" class="text-gold-600 font-medium hover:text-gold-700 flex items-center">
+                                View Project <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                        <div class="h-48 overflow-hidden">
+                            <img src="http://static.photos/finance/640x360/2" alt="Project 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold playfair mb-2 text-gold-600">Financial Dashboard</h3>
+                            <p class="text-gray-600 mb-4">Interactive data visualization for personal finance tracking.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gold-100 text-gold-700 text-xs rounded">D3.js</span>
+                                <span class="px-2 py-1 bg-gold-100 text-gold-700 text-xs rounded">Vue.js</span>
+                                <span class="px-2 py-1 bg-gold-100 text-gold-700 text-xs rounded">Firebase</span>
+                            </div>
+                            <a href="#" class="text-gold-600 font-medium hover:text-gold-700 flex items-center">
+                                View Project <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                        <div class="h-48 overflow-hidden">
+                            <img src="http://static.photos/education/640x360/3" alt="Project 3" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold playfair mb-2 text-gold-600">Learning Platform</h3>
+                            <p class="text-gray-600 mb-4">Online education platform with course management and progress tracking.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gold-100 text-gold-700 text-xs rounded">Next.js</span>
+                                <span class="px-2 py-1 bg-gold-100 text-gold-700 text-xs rounded">TailwindCSS</span>
+                                <span class="px-2 py-1 bg-gold-100 text-gold-700 text-xs rounded">Stripe</span>
+                            </div>
+                            <a href="#" class="text-gold-600 font-medium hover:text-gold-700 flex items-center">
+                                View Project <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-16">
+                    <a href="#" class="px-8 py-3 border-2 border-gold-500 text-gold-600 rounded-full font-medium hover:bg-gold-50 transition-all inline-flex items-center">
+                        View All Projects <i data-feather="chevron-right" class="ml-2 w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-6 md:px-12 lg:px-24 gold-gradient">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold playfair text-center mb-16 text-gold-700">
+                    Get In <span class="text-gold-500">Touch</span>
+                </h2>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/2 bg-gold-600 text-white p-10 flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold playfair mb-6">Let's Collaborate</h3>
+                            <p class="mb-8 opacity-90">
+                                Have a project in mind or want to discuss potential opportunities? 
+                                I'd love to hear from you!
+                            </p>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="bg-gold-500 bg-opacity-20 p-3 rounded-full mr-4">
+                                        <i data-feather="mail" class="text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Email</h4>
+                                        <p>hello@thoriqibd.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-gold-500 bg-opacity-20 p-3 rounded-full mr-4">
+                                        <i data-feather="phone" class="text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Phone</h4>
+                                        <p>+62 123 456 7890</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-gold-500 bg-opacity-20 p-3 rounded-full mr-4">
+                                        <i data-feather="map-pin" class="text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Location</h4>
+                                        <p>Jakarta, Indonesia</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex space-x-4 mt-10">
+                                <a href="#" class="bg-white bg-opacity-20 p-3 rounded-full hover:bg-opacity-30 transition">
+                                    <i data-feather="github" class="text-white"></i>
+                                </a>
+                                <a href="#" class="bg-white bg-opacity-20 p-3 rounded-full hover:bg-opacity-30 transition">
+                                    <i data-feather="linkedin" class="text-white"></i>
+                                </a>
+                                <a href="#" class="bg-white bg-opacity-20 p-3 rounded-full hover:bg-opacity-30 transition">
+                                    <i data-feather="twitter" class="text-white"></i>
+                                </a>
+                                <a href="#" class="bg-white bg-opacity-20 p-3 rounded-full hover:bg-opacity-30 transition">
+                                    <i data-feather="instagram" class="text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-1/2 p-10">
+                            <form>
+                                <div class="mb-6">
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-300 focus:border-gold-300 outline-none transition">
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-300 focus:border-gold-300 outline-none transition">
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                    <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-300 focus:border-gold-300 outline-none transition"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-gold-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-gold-700 transition shadow-md">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="py-10 px-6 text-center bg-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-2xl font-bold playfair mb-6 text-gold-600">Thoriq Ibd</div>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="text-gray-600 hover:text-gold-600 transition">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gold-600 transition">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gold-600 transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gold-600 transition">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gold-600 transition">
+                        <i data-feather="dribbble"></i>
+                    </a>
+                </div>
+                <p class="text-gray-500 mb-6">© 2023 Thoriq Ibd. All rights reserved.</p>
+                <p class="text-gray-400 text-sm">Crafted with <i data-feather="heart" class="inline w-4 h-4 text-rose-400"></i> in Jakarta</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Initialize Vanta.js
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xFFD700,
+            backgroundColor: 0xFFFFFF,
+            points: 10.00,
+            maxDistance: 22.00,
+            spacing: 16.00
+        });
+        
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
+</body>
+</html>
