@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url(./Display.css);
+    </style>
+    <title>Latihan Membuat Display</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>This is <span style="color: red">red text</span> in the paragraph</p>
+
+    <div style="background-color: lightblue; padding: 10px">
+      This is a div with a light blue background.
+    </div>
+
+    <div>
+      <span class="heading">Training</span>
+      <span class="subheading">Curriculum</span>
+      <span class="subheading">Material</span>
+      <span class="subheading">Location</span>
+    </div>
+
+    <div>
+      <span class="heading">Company</span>
+      <span class="subheading">Team</span>
+      <span class="subheading">Vision and mission</span>
+    </div>
+
+    <div
+      style="
+        display: inline-block;
+        background-color: peachpuff;
+        width: 200px;
+        height: 100px;
+        margin: 10px;
+      "
+    >
+      Box 1
+    </div>
+    <div
+      style="
+        display: inline-block;
+        background-color: lightcoral;
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+      "
+    >
+      Box 2
+    </div>
+
+    <p id="none">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione illum
+      perspiciatis perferendis sequi consectetur blanditiis doloribus voluptatem
+      eum maiores, reprehenderit voluptatum. Recusandae, modi minima aperiam
+      reiciendis labore atque possimus adipisci!
+    </p>
+
+    <div>
+        <img id="hidden" src="https://picsum.photos/200" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus deserunt saepe, officiis molestias harum quidem.</p>
+    </div>
+
+    <div>
+        <img id="none" src="https://picsum.photos/200" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae a voluptatem ad eius omnis repudiandae?</p>
+    </div>
+
+    <!-- CSS -->
+
+    <!-- Flex Box -->
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid-container">
+        <div class="grid-item header">Header</div>
+        <div class="grid-item sidebar">Sidebar</div>
+        <div class="grid-item content">Content</div>
+        <div class="grid-item footer">Footer</div>
+    </div>
+  </body>
+</html>
